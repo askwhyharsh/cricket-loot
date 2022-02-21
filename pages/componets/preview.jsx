@@ -3,7 +3,7 @@ const Preview = () => {
     <div className="narrow-container">
       <div className="top-section">
         <div className="logo">
-          <h1 className="logo-shadow">CRICKET LOOT</h1>
+          <h1 className="logo-shadow">Snail Punk</h1>
         </div>
         <div className="card">
           <img src="/images/sidecard.svg" alt="" />
