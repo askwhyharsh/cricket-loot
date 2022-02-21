@@ -34,9 +34,11 @@ const Mintbtn = () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     const contract = new ethers.Contract(CONTRACT_ADDRESS, abi, signer);
+    if(value>0 && value<5) {
     let txn1 = await contract.claim(value, {value: ethers.utils.parseEther("0.0269")});
     let wait = await txn1.wait();
-    console.log('Minted NFT'); 
+    console.log('Minted NFT');
+    } 
     } 
     catch (error) {
       console.log(error);
@@ -58,7 +60,7 @@ const Mintbtn = () => {
         <input
           className="mintinput"
           type="number"
-          placeholder="Enter TokenId"
+          placeholder="Enter Amount (<5)"
           value={value}
           onChange={handleChange}
         />
