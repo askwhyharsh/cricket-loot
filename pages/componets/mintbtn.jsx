@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import abi from "../../abi.json";
 
-const CONTRACT_ADDRESS = "0xbF199dEC2E06Ce4cDF5bef56412Ae9e10430632f";
+const CONTRACT_ADDRESS = "0xB79BE9acdf250AAf3D26b36B7F94BEcB237618a6";
 
 async function connectWallet() {
 
@@ -34,7 +34,7 @@ const Mintbtn = () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
     const contract = new ethers.Contract(CONTRACT_ADDRESS, abi, signer);
-    let txn1 = await contract.claim(value, {value: ethers.utils.parseEther("0.2")});
+    let txn1 = await contract.claim(value, {value: ethers.utils.parseEther("0.0269")});
     let wait = await txn1.wait();
     console.log('Minted NFT'); 
     } 
