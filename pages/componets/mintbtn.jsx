@@ -58,7 +58,7 @@ const Mintbtn = () => {
     <>
       <div className="mint">
         <input
-          className="mintinput"
+          className="mintinput text-black"
           type="number"
           placeholder="Enter Amount (<5)"
           value={value}
